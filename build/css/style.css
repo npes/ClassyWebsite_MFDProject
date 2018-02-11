@@ -11,7 +11,7 @@
   width: 1370px;
   margin: auto;
   grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: 100px 475px 585px 270px 690px 755px 430px 430px 275px 250px;
+  grid-template-rows: 100px 475px 585px 270px 778px 670px 430px 430px 275px 250px;
   /* give the grid areas names */
   grid-template-areas: "gtl lt lt .  .  .  .  .  .  .  nv nv nv gtr" "gtl hd hd hd hd hd hd hd hd hd hd hd hd gtr" ". 	 sA sA sA sA sA sA sA sA sA sA sA sA ." ".   sB sB sB sB sB sB sB sB sB sB sB sB ." ".   sC sC sC sC sC sC sC sC sC sC sC sC ." ".   sD sD sD sD sD sD sD sD sD sD sD sD ." ".   sE sE sE sE sE sE sE sE sE sE sE sE ." ".   sF sF sF sF sF sF sF sF sF sF sF sF ." ".   sG sG sG sG sG sG sG sG sG sG sG sG ." ".   ft ft ft ft ft ft ft ft ft ft ft ft .";
   grid-gap: 0; }
@@ -193,7 +193,6 @@ header {
     .sectionA .lookbook-img2 img {
       opacity: 0.7; }
 
-/* rowstart / columnstart / rowend / columnend*/
 /* SECTION B START - "TOP BRANDS" */
 .sectionB-BG {
   grid-area: 4 / 1 / 4 / 15;
@@ -203,11 +202,11 @@ header {
   grid-area: sB;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-around; }
   .sectionB .top-brands {
     display: flex;
     justify-content: center;
-    margin-top: 55px; }
+    margin-top: 5px; }
     .sectionB .top-brands svg {
       display: inline-block; }
     .sectionB .top-brands p {
@@ -222,20 +221,42 @@ header {
       margin: 0;
       padding: 0; }
     .sectionB .brand-logos img {
-      display: block; }
+      display: inline-block; }
   .sectionB .slider-controls {
     display: flex;
     justify-content: center; }
+    .sectionB .slider-controls img {
+      display: inline-block; }
 
 /* SECTION C START - "MUST HAVE FOR HER" */
 .sectionC {
-  grid-area: sC; }
+  grid-area: sC;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "l1 r1" "l1 r2";
+  grid-gap: 5px; }
+  .sectionC img {
+    display: block; }
+  .sectionC .left-image {
+    grid-area: l1;
+    align-self: center; }
+  .sectionC .right-image-top {
+    grid-area: r1;
+    align-self: end; }
+  .sectionC .right-image-botm {
+    grid-area: r2; }
 
 /* SECTION D START - "PRODUCTS SLIDER" */
 .sectionD {
   grid-area: sD; }
 
+/* rowstart / columnstart / rowend / columnend*/
 /* SECTION E START - "OFFERS" */
+.sectionE-bgImage {
+  grid-area: 7 / 1 / 7 / 15;
+  background: url("../images/Homepage/25OffBG.jpg") no-repeat center center;
+  background-size: cover; }
+
 .sectionE {
   grid-area: sE; }
 
