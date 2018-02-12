@@ -3,6 +3,7 @@
 /* VARIABLES*/
 $lightblue: #01c6d3;
 $dark: #333333;
+$darkgrey: #7b7b7b;
 $middlegrey: #dcdcdc;
 $lightgrey: #f6f6f6;
 $lightergrey: #f8f8f8;
@@ -334,9 +335,8 @@ header {
 	background-size: cover;
 }
 .sectionE {
-	grid-area: sE;
-	
-	
+	grid-area: sE;	
+
 }
 /* SECTION F START - "PRESENTATIONS SLIDER" */
 .sectionF {
@@ -347,8 +347,50 @@ header {
 	grid-area: sG;
 }
 /* FOOTER START */
+.footer-BG {
+	grid-area: 10 / 1 / 10 / 15;
+	background-color: $dark;
+}
 footer {
 	grid-area: ft;
+	display: grid;
+	grid-template-columns: 0.833fr 0.833fr 0.833fr 1.25fr 1.25fr;
+	align-items: center;
+	justify-items: center;
+	.ft-column {
+		justify-self: start;
+	}
+	h3 {
+		color: #ffffff;
+		text-transform: uppercase;
+		margin-bottom: 1.1em;
+	}
+	p {
+		text-align: center;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+    	padding: 0;
+		a {
+			text-decoration: none;
+			outline: none;
+			line-height: 2em;
+		}
+		a:link {
+			color: $darkgrey;
+		}
+		a:visited {
+			color: $darkgrey;
+		}
+		a:hover {
+			color: $lightgrey;
+		}
+	}
+	.logo-ft {
+		color: $darkgrey;
+		font-size: 0.8em;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -370,108 +412,5 @@ footer {
 			"sF sF sF sF sF sF"
 			"sG sG sG sG sG sG"
 			"ft ft ft ft ft ft";
-	}
-	
-	
+	}	
 }
-
-
-
-// .container {
-// 	display: flex;
-// 	justify-content: center;
-//   	align-items: center;
-// }
-
-// .hero {
-// 	background:url('../images/header/HEADER.jpg') no-repeat center center;
-// 	width: 1370px;
-// 	background-size: cover;
-// 	height: 575px;
-// }
-// .wrapper {
-// 	max-width: 1174px;
-// 	//max-width: 1370px;
-// 	margin: 0 auto;
-// 	font-family: 'Open Sans', sans-serif;
-// }
-
-// .wrapper > * {
-//     //border: 1px solid red;
-//     //background: tomato;
-//     //padding: 10px;
-// }
-
-
-
-// .logo {
-// 	grid-area: lg;
-// 	margin-top: 40px;
-// 	outline: none;
-// }
-	
-// .header-buttons {
-// 	grid-area: nv;
-// 	//align-self: flex-end;
-// 	display: flex;
-// 	justify-content: flex-end;
-// 	padding: 40px 0 0 0;
-// 	min-width: 200px;
-// 	margin: auto 0 auto 0;
-// 	//align-items: ;
-// 	align-content: space-between;
-// 	a {         
-// 						color: #ffffff;
-// 						padding: 0 0 0 0px;
-						
-// 						//text-align: center;
-// 						font-size: 0.9em;
-// 						text-decoration: none;
-// 						text-transform: uppercase;
-// 					}
-// 		.login-btn{
-// 			background:url('../images/Header/Login symbol.png') no-repeat center left;
-// 			margin: auto 0 auto auto;	
-// 			a {
-// 				padding: 0 0 0 25px;
-// 			};
-// 		}
-// 		.shopbag-btn{
-// 			background:url('../images/Header/Shopping bag symbol.png') no-repeat center left;
-// 			margin: auto 0 auto 16px;
-// 			a {
-// 				padding: 0 0 0 25px;
-// 			};	
-// 		}
-// 		.search-btn{
-// 			background:url('../images/Header/Mag glass symbol.png') no-repeat center left;
-// 			margin: auto 0 auto 16px;
-// 			a {
-// 				padding: 0 0 0 17px;
-// 			};
-// 		}
-// 		.menu-btn{
-// 			background:url('../images/Header/Burger menu icon.png') no-repeat center left;
-// 			margin: auto 0 auto 16px;
-// 			a {
-// 				padding: 0 0 0 17px;
-// 			};
-// 		}
-// 	}
-
-// .btn {
-// 	grid-area: hb;
-// 	//display: block;
-// 	padding: 0;
-// 	margin: 315px 0 0 50px;
-// 	width: 340px;
-// 	height: 60px;
-// 	cursor:pointer;
-// 	text-decoration: none;
-// 	text-transform: uppercase;
-// 	color: #ffffff;
-// 	background-color: transparent;
-// 	border: 2px	solid #ffffff;
-// 	font-size: 0.9em;
-// 	outline: none;
-// }
